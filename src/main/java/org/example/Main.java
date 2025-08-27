@@ -7,11 +7,11 @@ public class Main {
 int [] numeros = new int[10];
 Random aleatorio = new Random();
 
-for (int i = 0; i < numeros.length; i++) {
+for (int i = 0; i < 10; i++) {
     numeros[i] = aleatorio.nextInt(100) + 1;
 }
         System.out.println("Arreglo iniciado con numeros aleatorios");
-for (int i = 0; i < numeros.length; i++) {
+for (int i = 0; i < 10; i++) {
     System.out.println(numeros[i]);
 }
 
