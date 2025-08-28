@@ -11,11 +11,19 @@ Random aleatorio = new Random();
      numeros[i]=aleatorio.nextInt(100);
  }
 
-    System.out.println("muestra los numeros en pantalla");
+    System.out.println("muestra los numeros en pantalla"+"\n");
     for (int i:numeros) {
     System.out.println(i);
-            
 }
+   for(int i=0;i<numeros.length;i++){
+       if(numeros[i] % 2 != 0){
+           numeros[i]= 0;
+       }
+   }
+       System.out.println("Mostrar los impares cambiados por 0");
+       for (int i:numeros) {
+           System.out.println(i);
+       }
 
     }
 }
