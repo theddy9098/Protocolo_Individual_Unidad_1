@@ -1,38 +1,38 @@
 package org.example;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-int [] numeros = new int[10];
-Random aleatorio = new Random();
+        Scanner scanner = new Scanner(System.in);
 
- for(int i=0;i<numeros.length;i++){
-     numeros[i]=aleatorio.nextInt(100);
- }
+        int[] Numeros = new int[10];
+        Random aleatorio = new Random();
 
-    System.out.println("muestra los numeros en pantalla"+"\n");
-    for (int i:numeros) {
-    System.out.println(i + " ");
-}
-   for(int i=0;i<numeros.length;i++){
-       if(numeros[i] % 2 != 0){
-           numeros[i]= 0;
-       }
-   }
-       System.out.println("Mostrar los impares cambiados por 0");
-       for (int i:numeros) {
-           System.out.println(i + " ");
-       }
-
-
-        for (int i = 0; i < numeros.length; i++) {
-            numeros[i] = numeros[i] * i;
+        for (int i=0;i<Numeros.length; i++){
+             Numeros[i] = aleatorio.nextInt(100);
         }
 
-        System.out.println("Después de multiplicar por su índice:");
-        for (int i : numeros) {
-            System.out.print(i + " ");
+        for (int i:Numeros){
+            System.out.println(i + "  ");
+        }
+
+        System.out.println("Ingresa el numnero a buscar");
+        int BuscarValor = scanner.nextInt();
+
+        int Pocision = -1;
+        for (int i=0;i<Numeros.length; i ++){
+            if (Numeros[i] == BuscarValor){
+                Pocision = i;
+                break;
+
+            }
+        }
+        if (Pocision != -1) {
+            System.out.println("El número " + BuscarValor + " está en la posición: " + Pocision);
+        } else {
+            System.out.println("El número " + BuscarValor + " no se encontró en el arreglo.");
         }
 
     }
