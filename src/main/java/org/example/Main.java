@@ -13,7 +13,7 @@ Random aleatorio = new Random();
 
     System.out.println("muestra los numeros en pantalla"+"\n");
     for (int i:numeros) {
-    System.out.println(i);
+    System.out.println(i + " ");
 }
    for(int i=0;i<numeros.length;i++){
        if(numeros[i] % 2 != 0){
@@ -22,8 +22,18 @@ Random aleatorio = new Random();
    }
        System.out.println("Mostrar los impares cambiados por 0");
        for (int i:numeros) {
-           System.out.println(i);
+           System.out.println(i + " ");
        }
+
+
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = numeros[i] * i;
+        }
+
+        System.out.println("Después de multiplicar por su índice:");
+        for (int i : numeros) {
+            System.out.print(i + " ");
+        }
 
     }
 }
