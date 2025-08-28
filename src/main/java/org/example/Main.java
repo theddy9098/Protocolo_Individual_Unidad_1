@@ -5,35 +5,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int Matriz[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
-        int[] Numeros = new int[10];
-        Random aleatorio = new Random();
-
-        for (int i=0;i<Numeros.length; i++){
-             Numeros[i] = aleatorio.nextInt(100);
-        }
-
-        for (int i:Numeros){
-            System.out.println(i + "  ");
-        }
-
-        System.out.println("Ingresa el numnero a buscar");
-        int BuscarValor = scanner.nextInt();
-
-        int Pocision = -1;
-        for (int i=0;i<Numeros.length; i ++){
-            if (Numeros[i] == BuscarValor){
-                Pocision = i;
-                break;
-
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(Matriz[i][j] + " ");
             }
-        }
-        if (Pocision != -1) {
-            System.out.println("El número " + BuscarValor + " está en la posición: " + Pocision);
-        } else {
-            System.out.println("El número " + BuscarValor + " no se encontró en el arreglo.");
-        }
 
+            System.out.println();
+
+
+        }
     }
 }
