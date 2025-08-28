@@ -7,11 +7,12 @@ public class Main {
     public static void main(String[] args) {
         int Matriz[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {   //con esto recorremos la matriz en forma de filas
             for (int j = 0; j < 3; j++) {
                 System.out.print(Matriz[i][j] + " ");
             }
 
+            // Aqui imprimimos en forma de tabla
             System.out.println();
 
 
